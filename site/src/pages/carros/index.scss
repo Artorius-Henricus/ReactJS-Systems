@@ -1,0 +1,120 @@
+.pagina-carros {
+    display: flex;
+    flex-direction: column;
+    background-color: #e0e0e0;
+    overflow-x: hidden;
+    
+    .corpo {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+    }
+
+    .corpo > h1 {
+        font-size: 26px;
+        font-weight: 700;
+        color: rgba(116, 106, 106, 1);
+        margin: 25px 0px;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: row;
+        width: 659px;
+        height: 408px;
+        border-radius: 6px;
+        box-shadow: 0px 0px 14px 1px rgba(173, 173, 173, 0.25);
+    }
+
+    .imagem {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 298px;
+        height: 408px;
+        border-radius: 6px 0px 0px 6px;
+        background-color: rgba(202, 202, 202, 1);
+    }
+
+    .dir {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 361px;
+        padding: 20px;
+        background-color: #fff;
+    }
+
+    .dir h2 {
+        color: #646464;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24.39px;
+    }
+
+    .dir input {
+        border: 1px solid rgba(223, 223, 223, 1);
+        width: 296px;
+        height: 38px;
+        padding: 10px;
+        border-radius: 3px;
+        outline: none;
+        font-size: 14px;
+        line-height: 16.94px;
+        color: rgba(136, 136, 136, 1);
+    }
+
+    .group {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .group input {
+        width: 149px;
+        height: 37px;
+    }
+
+    .group div {
+        margin-right: 22px;
+    }
+
+    #inpt {
+        width: 125px;
+        height: 38px;
+    }
+
+    .dir button {
+        width: 289px;
+        height: 43.42px;
+        border-radius: 3px;
+        background-color: rgba(0, 132, 255, 1);
+        border: none;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19.36px;
+        text-align: center;
+        color: #fff;
+        margin-top: 10px;
+        transition: 0.2s;
+    }
+
+    .dir button:active {
+        background-color: rgb(0, 97, 187);
+    }
+
+    .resp {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .resp h2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 200px;
+    }
+}

@@ -1,0 +1,87 @@
+.compuserpost {
+    display: flex;
+    flex-direction: column;
+
+
+    .cabecalhopost {
+        display: flex;
+        flex-direction: row;
+        width: 504px;
+        margin-top: 40px;
+    }
+
+    .cabecalhopost > div {
+        margin-left: 20px;
+    }
+
+    .cabecalhopost > img {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+    }
+
+    .cabecalhopost h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        margin-right: 6px;
+    }
+
+    #nmdt {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #nmdt h3 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    #verified {
+        width: 12px;
+        height: 12px;
+    }
+
+    #post {
+        max-width: 504px;
+        margin: 15px 0px;
+    }
+
+    .btt {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .btt img {
+        margin: 5px 5px;
+        cursor: pointer;
+        height: 20.03px;
+    }
+
+    #curtidas {
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .coment {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .coment p {
+        margin-right: 10px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    #comentado {
+        font-size: 16px;
+        font-weight: 400;
+        color: #dadada;
+    }
+}

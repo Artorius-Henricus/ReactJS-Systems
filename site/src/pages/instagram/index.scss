@@ -1,0 +1,169 @@
+.pagina-instagram {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 223px;
+        background-color: rgba(37, 37, 37, 1);
+        padding: 20px;
+        overflow-x: hidden;
+    }
+
+    #cabecalho {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    #cabecalho a {
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none;
+        color: #fff;
+        margin-left: 10px;
+    }
+
+    #cabecalho img {
+        height: 37.02px;
+    }
+
+    .menubt {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+        margin: 10px 0px;
+    }
+
+    .menubt a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .menubt img {
+        height: 17px;
+        margin-right: 20px;
+    }
+
+    .bd {
+        border: 2px solid rgba(248, 248, 248, 1);
+        border-radius: 5px;
+        overflow-x: hidden;
+    }
+
+    .dir {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(37, 37, 37, 1);
+        flex-grow: 1;
+        padding: 20px;
+    }
+
+    .dir > button {
+        font-size: 12px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 1);
+        border: none;
+        background-color: rgba(55, 55, 55, 1);
+        padding: 10px;
+        border-radius: 20px;
+        margin: 20px 0px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .dir > button:active {
+        background-color: rgb(82, 82, 82);
+    }
+
+    .users {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .boxreg {
+        display: flex;
+        flex-direction: column;
+        width: 544px;
+        border-radius: 1px;
+        padding: 37px 30px 7px 30px;
+        background: linear-gradient(180deg, #353535 0%, rgba(60, 60, 60, 0) 74.48%);
+        margin-top: 20px;
+    }
+
+    .boxreg input {
+        background: rgba(224, 224, 224, 1);
+        border-radius: 4px;
+        height: 26px;
+        border: none;
+        outline: none;
+        font-size: 12px;
+        font-weight: 400;
+        margin-left: 15px;
+        flex-grow: 1;
+    }
+
+    .boxreg h1 {
+        width: 70px;
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 1);
+        text-align: end;
+    }
+
+    .boxreg div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 10px 0px;
+    }
+
+    .scnd {
+        width: 90px;
+    }
+
+    #descr {
+        height: 77px;
+        background: rgba(224, 224, 224, 1);
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        font-size: 12px;
+        font-weight: 400;
+        margin-left: 15px;
+        flex-grow: 1;
+        resize: none;
+        padding: 10px;
+    }
+
+    .boxreg button{
+        width: 379px;
+        height: 32px;
+        background-color: rgba(198, 8, 68, 1);
+        border-radius: 3px;
+        border: none;
+        font-weight: 700;
+        font-size: 14px;
+        color: #fff;
+        transition: 0.2s;
+        align-self: flex-end;
+    }
+
+    .boxreg button:active{
+        background-color: rgb(151, 9, 54);
+    }
+}
