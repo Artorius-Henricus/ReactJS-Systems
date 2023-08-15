@@ -35,6 +35,14 @@ export default function UsuariosPG() {
         setLista([...connect.data])
     }
 
+    async function Apagar(itemExcluir){
+        let listaNova = lista.filter(item => item.id != itemExcluir.id)
+        let url = 'http://localhost:5000/excluir'
+        let connect = axios.post(url, listaNova)
+
+        setLista([...listaNova])
+    }
+
     return (
         <div className='pagina-usuarios'>
             <Compcabecalho/>
@@ -52,7 +60,7 @@ export default function UsuariosPG() {
                             <input type='text' value={cursouser} onChange={e => setCursouser(e.target.value)}/>
 
                             <h3>Id do Usuário</h3>
-                            <input type='text' value={nomeuser} onChange={e => setNomeuser(e.target.value)}/>
+                            <input type='text' value={iduser} onChange={e => setIduser(e.target.value)}/>
                         </div>
                         <div>
                             <h3>Senha do Usuário</h3>
@@ -85,7 +93,9 @@ export default function UsuariosPG() {
                                     <th>{item.senha}</th>
                                     <th>{item.curso}</th>
                                     <th>{item.turma}</th>
-                                    <th><button id='apagarbt'>X</button></th>
+                                    <th>
+                                        <button id='apagarbt' onClick={() => Apagar(item)}>X</button>
+                                    </th>
                                 </tr>
                                 )}
                         </tbody>

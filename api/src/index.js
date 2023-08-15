@@ -12,6 +12,7 @@ let userlist = []
 
 server.get('/cadastrar', (req, resp) => {
     let usuario = {
+        id: req.query.id,
         nome: req.query.nome,
         senha: req.query.senha,
         turma: req.query.turma,
@@ -27,6 +28,14 @@ server.get('/atualizar', (req, resp) => {
     let x = userlist
 
     resp.send(x)
+})
+
+server.post('/excluir', (req, resp) =>{
+    let listinha = req.body;
+    userlist = [...listinha]
+    console.log(userlist)
+
+    resp.send(userlist)
 })
 
 server.listen(process.env.PORT,
