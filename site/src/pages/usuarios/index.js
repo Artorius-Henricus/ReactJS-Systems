@@ -12,6 +12,9 @@ export default function UsuariosPG() {
     const [cursouser, setCursouser] = useState('')
 
     const [lista, setLista] = useState([])
+    const [showoff, setShowoff] =useState(true)
+
+    const [estado, setEstado] = useState(<i class="fa-regular fa-eye"></i>)
 
     async function CadastrarUser() {
         
@@ -44,6 +47,15 @@ export default function UsuariosPG() {
         setLista([...listaNova])
     }
 
+    function Show(){
+        if (showoff == true) {
+            setEstado(<i class="fa-regular fa-eye-slash"></i>)
+        }
+        else {
+            setEstado(<i class="fa-regular fa-eye"></i>)
+        }
+    }
+
     return (
         <div className='pagina-usuarios'>
             <Compcabecalho/>
@@ -51,7 +63,7 @@ export default function UsuariosPG() {
             <section className='corpo'>
                 <div className='box'>
                     <h1>Bem-Vindo ao Cadastro de Usuários</h1>
-                    
+                    <button onClick={() => {setShowoff(!showoff); Atualizar(); Show();}}>{estado}</button>
                     <div className='inputs'>
                         <div>
                             <h3>Nome de Usuário</h3>
@@ -82,19 +94,24 @@ export default function UsuariosPG() {
                                 <th></th>
                             </tr>
                         </thead>
-                        <tbody>
-                            {lista.map(item =>
-                                <tr>
-                                    <th>{item.nome}</th>
-                                    <th>{item.senha}</th>
-                                    <th>{item.curso}</th>
-                                    <th>{item.turma}</th>
-                                    <th>
-                                        <button id='apagarbt' onClick={() => Apagar(item)}>X</button>
-                                    </th>
-                                </tr>
-                                )}
-                        </tbody>
+                        
+                        {showoff === true && 
+                        <>
+                            <tbody>
+                                {lista.map(item =>
+                                    <tr>
+                                        <th>{item.nome}</th>
+                                        <th>{item.senha}</th>
+                                        <th>{item.curso}</th>
+                                        <th>{item.turma}</th>
+                                        <th>
+                                            <button id='apagarbt' onClick={() => Apagar(item)}>X</button>
+                                        </th>
+                                    </tr>
+                                    )}
+                            </tbody>
+                        </>
+                        }
                     </table>
                 </div>
             </section>
