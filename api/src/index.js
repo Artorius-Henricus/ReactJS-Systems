@@ -33,7 +33,6 @@ server.get('/atualizar', (req, resp) => {
 server.post('/excluir', (req, resp) =>{
     let listinha = req.body;
     userlist = [...listinha]
-    console.log(userlist)
 
     resp.send(userlist)
 })

@@ -5,7 +5,7 @@ import { useState } from 'react'
 import axios from 'axios'
 
 export default function UsuariosPG() {
-    const [iduser, setIduser] = useState('')
+    const { v4: uuidv4 } = require('uuid');
     const [nomeuser, setNomeuser] = useState('')
     const [senhauser, setSenhauser] = useState('')
     const [turmauser, setTurmauser] = useState('')
@@ -14,15 +14,16 @@ export default function UsuariosPG() {
     const [lista, setLista] = useState([])
 
     async function CadastrarUser() {
+        
         let user = {
-            id: iduser,
+            id: uuidv4(),
             nome: nomeuser,
             senha: senhauser,
             turma: turmauser,
             curso: cursouser
         }
 
-        let url = `http://localhost:5000/cadastrar?id=${iduser}&nome=${nomeuser}&senha=${senhauser}&turma=${turmauser}&curso=${cursouser}`
+        let url = `http://localhost:5000/cadastrar?id=${user.id}&nome=${nomeuser}&senha=${senhauser}&turma=${turmauser}&curso=${cursouser}`
         let connect = await axios.get(url);
 
         setLista([...lista, user])
@@ -58,9 +59,6 @@ export default function UsuariosPG() {
 
                             <h3>Curso</h3>
                             <input type='text' value={cursouser} onChange={e => setCursouser(e.target.value)}/>
-
-                            <h3>Id do Usuário</h3>
-                            <input type='text' value={iduser} onChange={e => setIduser(e.target.value)}/>
                         </div>
                         <div>
                             <h3>Senha do Usuário</h3>
@@ -77,7 +75,6 @@ export default function UsuariosPG() {
                     <table className='tabela'>
                         <thead>
                             <tr id='cabecalho'>
-                                <th>Id</th>
                                 <th>Nome</th>
                                 <th>Senha</th>
                                 <th>Curso</th>
@@ -88,7 +85,6 @@ export default function UsuariosPG() {
                         <tbody>
                             {lista.map(item =>
                                 <tr>
-                                    <th>{item.id}</th>
                                     <th>{item.nome}</th>
                                     <th>{item.senha}</th>
                                     <th>{item.curso}</th>

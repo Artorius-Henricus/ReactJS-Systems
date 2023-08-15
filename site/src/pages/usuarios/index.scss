@@ -101,4 +101,15 @@
     #apagarbt {
         width: 30px;
     }
+
+    #apagarbt:hover {
+        transition: 0.5s;
+        background-color: #555555;
+        color: #fff;
+    }
+
+    #apagarbt:active {
+        transition: 0.1s;
+        background-color: red;
+    }
 }
