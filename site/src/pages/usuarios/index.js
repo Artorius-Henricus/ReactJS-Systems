@@ -47,7 +47,7 @@ export default function UsuariosPG() {
         setLista([...listaNova])
     }
 
-    function Show(){
+    function ShowOff(){
         if (showoff == true) {
             setEstado(<i class="fa-regular fa-eye-slash"></i>)
         }
@@ -63,7 +63,7 @@ export default function UsuariosPG() {
             <section className='corpo'>
                 <div className='box'>
                     <h1>Bem-Vindo ao Cadastro de Usuários</h1>
-                    <button onClick={() => {setShowoff(!showoff); Atualizar(); Show();}}>{estado}</button>
+                    <button onClick={() => {setShowoff(!showoff); Atualizar(); ShowOff();}}>{estado}</button>
                     <div className='inputs'>
                         <div>
                             <h3>Nome de Usuário</h3>
